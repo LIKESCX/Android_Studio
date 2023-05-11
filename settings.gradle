@@ -1,0 +1,25 @@
+pluginManagement {//插件管理
+    repositories {//搜索或下载Gradle插件的仓库依赖
+        maven {url 'https://jitpack.io'}
+        gradlePluginPortal()
+        google()        //Google's Maven repository
+        mavenCentral()  //Maven Central Repository
+    }
+}
+dependencyResolutionManagement {//依赖项解析管理
+    /**
+     * 存储库模式：
+     * PREFER_PROJECT --首选项目远程仓库，表示如果工程单独设置了仓库，就优先使用工程配置的，忽略settings里面的
+     * PREFER_SETTINGS--首选settings远程仓库，表述任何通过工程单独设置或插件设置的仓库，都会被忽略
+     * FAIL_ON_PROJECT_REPOS--强制settings远程仓库，表示如果工程单独设置了仓库，或工程的插件设置了仓库，构建就直接报错抛出异常
+     */
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)//设置存储库的方法
+    repositories {
+        maven {url 'https://jitpack.io'}
+        google()        //Google's Maven repository
+        mavenCentral()  //Maven Central Repository
+    }
+}
+rootProject.name = "MyApplication"  //根工程的名字
+include ':app'  //包含的子模块
+include ':mysecondapplication'

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!-- LinearLayoutCompat其实就是LinerLayout组件,只是为了兼容低版本-->
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <!--第四种-->
+    <Button
+        android:id="@+id/button_0"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        />
+
+    <Button
+        android:id="@+id/button_1"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        />
+
+    <Button
+        android:id="@+id/button_2"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        />
+
+    <Button
+        android:id="@+id/button_3"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+<!--
+    设屏幕宽度为L，剩余宽度为L-（100dp）
+    三个Button的宽度依次为：
+    100+(L-（100dp）)*1/3
+    0+(L-（100dp）)*1/3
+    0+(L-（100dp）)*1/3
+    相当于是把L-100dp平均分为6份，然后按比重划分给每个view
+    最后把100dp加到指定的view上
+-->

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!-- LinearLayoutCompat其实就是LinerLayout组件,只是为了兼容低版本-->
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+    <!--第一种-->
+    <Button
+        android:id="@+id/button_0"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+     />
+
+    <Button
+        android:id="@+id/button_1"
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+       />
+
+    <Button
+        android:id="@+id/button_2"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        />
+</androidx.appcompat.widget.LinearLayoutCompat>
+    <!--
+    android:layout_weight的真实含义是:一旦View设置了该属性(假设有效的情况下)，那么该 View的宽度等于原有宽度(android:layout_width)加上剩余空间的占比！
+    计算公式：
+    控件A最终宽度 ＝ 控件A初始宽度+（屏幕宽度 - 控件宽度和）* 控件A的weight的值 /所有weight之和
+    下面分析中所提到的剩余宽度 = 屏幕宽度 - 控件宽度和
+    -->
+    <!--
+        设屏幕宽度为L，三个view指定的android:layout_width都是0，所以剩余宽度为L.
+        三个TextView的宽度依次为：
+        0+(L)*1/6
+        0+(L)*2/6
+        0+(L)*3/6
+    -->

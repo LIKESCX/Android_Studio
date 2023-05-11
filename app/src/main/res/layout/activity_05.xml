@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!-- LinearLayoutCompat其实就是LinerLayout组件,只是为了兼容低版本-->
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:baselineAligned="false"
+    tools:context=".MainActivity">
+
+    <!--第六种-->
+    <Button
+        android:id="@+id/button_0"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:text="1233444556666777889"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:background="@color/blue"
+
+        />
+
+    <Button
+        android:id="@+id/button_1"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        />
+
+    <Button
+        android:id="@+id/button_2"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+<!--
+    设屏幕宽度为L，三个view指定的android:layout_width都是0，所以剩余宽度为L.
+    三个TextView的宽度依次为：
+    0+(L)*1/3
+    0+(L)*1/3
+    0+(L)*1/3
+-->
