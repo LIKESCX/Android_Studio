@@ -33,9 +33,9 @@
         />
 </androidx.appcompat.widget.LinearLayoutCompat>
     <!--
-    android:layout_weight的真实含义是:一旦View设置了该属性(假设有效的情况下)，那么该 View的宽度等于原有宽度(android:layout_width)加上剩余空间的占比！
+    android:layout_weight的真实含义是:一旦View设置了该属性(假设有效的情况下)，那么该View的宽度等于原有宽度(android:layout_width)加上剩余空间的占比！
     计算公式：
-    控件A最终宽度 ＝ 控件A初始宽度+（屏幕宽度 - 控件宽度和）* 控件A的weight的值 /所有weight之和
+    控件A最终宽度 = 控件A初始宽度+（屏幕宽度 - 控件宽度和）* 控件A的weight的值 /所有weight之和
     下面分析中所提到的剩余宽度 = 屏幕宽度 - 控件宽度和
     -->
     <!--
